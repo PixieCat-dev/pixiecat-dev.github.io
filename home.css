@@ -3,6 +3,197 @@ body {
     margin: 0px;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+}
+
+#header {
+    min-width: 1100px;
+    background: #2fb946;
+    border-top: 1px solid #49e156;
+    border-bottom: 2px solid #9ffebb;
+}
+
+#headcon {
+    margin: 0 auto;
+    width: 1050px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#logo {
+    width: 700px;
+    height: 79px;
+}
+
+#side ul li a,
+a:visited {
+    color: #f4fbff;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+#back a,
+a:visited {
+    color: #f4fbff;
+}
+
+#nav {
+    border: 1px solid #49e162;
+    background: #1d7324;
+    text-align: center;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    background: #1d7332;
+    background: -moz-linear-gradient(top, rgb(29, 115, 33) 60%, rgb(22, 86, 36) 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgb(29, 55, 115)), color-stop(99%, rgb(22, 86, 41)));
+    background: -webkit-linear-gradient(top, rgb(29, 115, 40) 60%, rgb(22, 86, 43) 99%);
+    background: -o-linear-gradient(top, rgb(29, 115, 40) 60%, rgb(22, 86, 36) 99%);
+    background: -ms-linear-gradient(top, rgb(29, 115, 33) 60%, rgb(22, 86, 31) 99%);
+    background: linear-gradient(top, rgb(29, 115, 29) 60%, rgb(22, 86, 33) 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1d3773', endColorstr='#162b56', GradientType=0);
+}
+
+#nav ul {
+    display: inline;
+    margin-left: -40px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#nav ul li {
+    list-style: none;
+    display: inline;
+    font-size: 140%;
+    text-transform: uppercase;
+    font-family: cabin condensed, sans-serif;
+}
+
+#nav a:hover,
+#status a:hover,
+#nav .active {
+    background-color: #45da65;
+    border-top: 1px solid #beffc7;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+#nav a,
+a:visited,
+#status a,
+a:visited {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-decoration: none;
+    font-size: 95%;
+    color: #ffffff;
+}
+
+#social ul {
+    display: inline;
+}
+
+#social ul li {
+    list-style: none;
+    display: inline;
+}
+
+#social a,
+a:visited {
+    padding: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+img {
+    border: none;
+}
+
+#social {
+    float: right;
+    text-align: right;
+    display: block;
+    margin-right: 4px;
+    margin-top: -40px;
+}
+
+#social a:hover {
+    background: #3ab92f
+}
+
+#social a,
+a:visited {
+    padding: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px
+}
+
+#logo {
+    width: 700px;
+    height: 79px;
+}
+
+#main {
+    min-height: 750px;
+}
+
+#container {
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 1050px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#entry {
+    width: 800px;
+    height: fit-content;
+    border: #cccccc 1px;
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    border: 1px solid #cfcfcf;
+    text-shadow: none;
+    background: #feffff;
+    background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 1%, rgba(248, 248, 248, 1) 92%, rgba(238, 238, 238, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, rgba(254, 255, 255, 1)), color-stop(92%, rgba(248, 248, 248, 1)), color-stop(100%, rgba(238, 238, 238, 1)));
+    background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 1%, rgba(248, 248, 248, 1) 92%, rgba(238, 238, 238, 1) 100%);
+    background: -o-linear-gradient(top, rgba(254, 255, 255, 1) 1%, rgba(248, 248, 248, 1) 92%, rgba(238, 238, 238, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(254, 255, 255, 1) 1%, rgba(248, 248, 248, 1) 92%, rgba(238, 238, 238, 1) 100%);
+    background: linear-gradient(top, rgba(254, 255, 255, 1) 1%, rgba(248, 248, 248, 1) 92%, rgba(238, 238, 238, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#eeeeee', GradientType=0);
+}
+
+#container {
+    width: 100vw;
+}
+
+#project-more {
+    opacity: 0;
+    position: absolute;
+    background: white;
+    border: 2px solid #000000 !important;
+}
+
 #topbar-container {
     background: black;
     height: 35px;
