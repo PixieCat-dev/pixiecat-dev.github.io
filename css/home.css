@@ -1,0 +1,121 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+}
+
+#header-container {
+    min-width: 1000px;
+    background-color: #00c220;
+    border-top: 1px solid #00f128;
+}
+
+#header {
+    width: 1050px;
+}
+
+#logo {
+    width: 200px;
+    height: 79px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    border: none;
+}
+
+#logo img {
+    height: 79px;
+}
+
+#nav {
+    width: 1050px;
+    height: fit-content;
+    background-color: #006912;
+    border: 1px solid #41e74e;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#nav ul li {
+    list-style: none;
+    display: inline;
+    font-size: 140%;
+    text-transform: uppercase;
+    font-family: cabin condensed, sans-serif;
+}
+
+#nav ul {
+    display: inline;
+    list-style: none;
+    margin-left: -40px;
+}
+
+#nav a:hover,
+#nav .active {
+    background-color: #45da45;
+    border-top: 1px solid #beffcc;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    position: relative;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 95%;
+    color: #fff;
+    box-sizing: border-box;
+    /* This includes padding in the element's total width */
+}
+
+#nav .active {
+    pointer-events: none;
+}
+
+#nav a {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    position: relative;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 95%;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+/* page container */
+
+#page-container {
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 1050px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: fit-content;
+}
+
+.title {
+    font-size: 30px;
+    color: #000000;
+}
+
+.body {
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 105%;
+    border: 1px solid #cfcfcf;
+    text-shadow: none;
+    background: #feffff;
+}
+
+::marker {
+    opacity: 0;
+    display: none;
+}
