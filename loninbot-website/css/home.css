@@ -1,0 +1,60 @@
+#info-window {
+	width: 60vw;
+	height: calc (100vh);
+	background-color: rgba(0,0,0,0.8);
+	text: white;
+	border: solid #242424 5px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin-bottom: 15px;
+}
+
+html {
+	background: url(../img/background.jpg) no-repeat;
+	background-size:100vw;
+}
+#you {
+	color: white !important;
+	font-size: 50px;
+}
+span {
+	color: white;
+}
+#bot-info-text,#contant-info-text {
+	display:block;
+	font-size: 20px !important;
+}
+#bot-info {
+	border-bottom: solid white 1px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	width: 57vw;
+}
+
+.bot-icon-container {
+    width: 60px;
+    height: 60px;
+	display: inline-block;
+}
+
+/* Resize images */
+.bot-icon-container img {
+    width: 100%;
+    height: 100%;
+}
+#bot-name-header {
+	position:relative;
+	font-size: 30px;
+	margin-right: 10px;
+	bottom: 12px !important;
+}
+#add-button {
+	color : white !important;
+	background-color: gray !important;
+	height: calc (100vh);
+	border: solid 2px #404040 !important;
+}
+#page-design {
+	color:gray !important;
+	font-size: 6px !Important;
+}
