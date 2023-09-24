@@ -1,3 +1,21 @@
+function checkCookieAndRedirect() {
+  // Split the document.cookie string into individual cookie parts
+  const cookies = document.cookie.split('; ');
+
+  // Iterate through the cookies to find the one named "PREF"
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+    if (name === 'PREF' && value === 'F6') {
+      // Redirect to /old-site
+      window.location.href = '/old-site';
+      return; // Exit the function to prevent further checks
+    }
+  }
+}
+
+// Call the function to check the cookie and redirect if necessary
+checkCookieAndRedirect();
+
 function ShowHome() {
     // Remove the "active" class from the other buttons
     var page1Button = document.querySelector('#projects-button');
