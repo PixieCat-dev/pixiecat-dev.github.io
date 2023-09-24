@@ -6,7 +6,7 @@ let currentSequence = [];
 function checkSequence() {
     if (currentSequence.join('') === desiredSequence.join('')) {
         // Redirect to a page when the sequence is complete
-        window.location.href = 'https://pixiecat-dev.github.io/projects/codename-rising'; // Replace with your desired URL
+        window.location.href = 'https://pixiecat-dev.github.io/old-site/projects/codename-rising'; // Replace with your desired URL
     }
 }
 
