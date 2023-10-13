@@ -16,6 +16,33 @@ function checkCookieAndRedirect() {
 // Call the function to check the cookie and redirect if necessary
 checkCookieAndRedirect();
 
+// Define the desired key sequence
+const desiredSequence = ['p', 'e', 'r', 's', 'o', 'n', 'a', 'l'];
+let currentSequence = [];
+
+// Function to check if the sequence is complete
+function checkSequence() {
+    if (currentSequence.join('') === desiredSequence.join('')) {
+        // Redirect to a page when the sequence is complete
+        window.location.href = 'personal.html'; // Replace with your desired URL
+    }
+}
+
+// Event listener for key presses
+document.addEventListener('keydown', function(event) {
+    // Convert the key to lowercase for case insensitivity
+    const key = event.key.toLowerCase();
+
+    // Add the key to the current sequence
+    currentSequence.push(key);
+
+    // Keep only the last n keys in the sequence, where n is the length of the desired sequence
+    currentSequence = currentSequence.slice(-desiredSequence.length);
+
+    // Check if the sequence is complete
+    checkSequence();
+});
+
 function ShowHome() {
     // Remove the "active" class from the other buttons
     var page1Button = document.querySelector('#projects-button');
