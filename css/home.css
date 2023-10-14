@@ -10,12 +10,16 @@ body {
 
 #header-container {
     min-width: 1000px;
-    background-color: #00c220;
+    background: rgb(18, 121, 0);
+    background: -moz-linear-gradient(0deg, rgba(18, 121, 0, 1) 0%, rgba(0, 255, 23, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(18, 121, 0, 1) 0%, rgba(0, 255, 23, 1) 100%);
+    background: linear-gradient(0deg, rgba(18, 121, 0, 1) 0%, rgba(0, 255, 23, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#127900", endColorstr="#00ff17", GradientType=1);
     border-top: 1px solid #00f128;
 }
 
 #header {
-    width: 1050px;
+    width: 100vw;
 }
 
 #logo {
@@ -23,6 +27,7 @@ body {
     height: 79px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 
 img {
@@ -34,11 +39,11 @@ img {
 }
 
 #nav {
-    width: 1050px;
+    width: 100vw;
     height: fit-content;
     background-color: #006912;
-    border: 1px solid #41e74e;
-    border-radius: 5px 5px 0px 0px;
+    align-items: center;
+    text-align: center;
 }
 
 #nav ul li {
@@ -57,8 +62,7 @@ img {
 
 #nav a:hover,
 #nav .active {
-    background-color: #45da45;
-    border-top: 1px solid #beffcc;
+    background-color: #08ce08;
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 1px;
@@ -101,7 +105,8 @@ img {
     height: fit-content;
 }
 
-.title {
+.title,
+.date {
     font-size: 30px;
     color: #000000;
 }
@@ -112,10 +117,70 @@ img {
     font-size: 105%;
     border: 1px solid #cfcfcf;
     text-shadow: none;
+    border-radius: 15px;
     background: #feffff;
+    box-shadow: 1px 2px 25px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 2px 25px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 25px 0px rgba(0, 0, 0, 0.75);
 }
 
 ::marker {
     opacity: 0;
     display: none;
+}
+
+#social {
+    float: right;
+    text-align: right;
+    display: block;
+    margin-top: -35px;
+    padding-right: 5px;
+    cursor: pointer;
+    width: 99.9vw;
+}
+
+#social ul {
+    display: inline;
+}
+
+#social ul li {
+    display: inline;
+}
+
+#social ul li img {
+    height: 32px;
+    width: 32px;
+}
+
+.button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid #7b7b7b;
+    padding-right: 10px;
+    border-radius: 3px;
+    background: #dbdbdb;
+    display: inline;
+    text-decoration: none !important;
+    color: black
+}
+
+span {
+    text-decoration: none !important;
+    color: black
+}
+
+.button:hover {
+    box-shadow: 0px 5px 21px -5px rgba(0, 0, 0, 0.24);
+}
+
+.button:focus {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid #7b7b7b;
+    padding-right: 10px;
+    border-radius: 3px;
+    background: #dbdbdb;
+    box-shadow: 0px 11px 22px 1px rgba(0, 0, 0, 0.24) inset;
 }
