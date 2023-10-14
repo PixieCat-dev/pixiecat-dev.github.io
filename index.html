@@ -7,33 +7,62 @@
 
 <body>
     <a href="/old-site" id="oldlayout" style="position: fixed;bottom: 15;right: 15;"><img height="88px" src="img/revert.png"></a>
-    <center>
-        <div id="header-container">
-            <div id="header">
-                <div id="logo">
-                    <img src="img/miya.png"><span style="font-size: 28px;color:white">Pixiecat</span>
-                </div>
-                <div id="nav">
-                    <ul style="cursor:default   ;">
-                        <li style="cursor: pointer;"><a id="home-button" class="active" onclick="ShowHome()">Home</a></li>
-                        <li style="cursor: pointer;"><a id="projects-button" class="" onclick="ShowProjects()">Projects</a></li>
-                        <li style="cursor: pointer;"><a id="contact-button" class="" onclick="ShowContact()">Contact</a></li>
-                        <li style="cursor: pointer;"><a id="about-button" class="" onclick="ShowAbout()">About</a></li>
-                    </ul>
-                </div>
+    <div id="header-container">
+        <div id="header">
+            <div id="logo">
+                <img src="img/miya.png"><span style="font-size: 28px;color:white">Pixiecat</span>
             </div>
-        </div>
+            <div id="nav">
+                <ul style="cursor:default   ;">
+                    <li style="cursor: pointer;"><a id="home-button" class="active" onclick="ShowHome()">Home</a></li>
+                    <li style="cursor: pointer;"><a id="projects-button" class="" onclick="ShowProjects()">Projects</a></li>
+                    <li style="cursor: pointer;"><a id="contact-button" class="" onclick="ShowContact()">Contact</a></li>
+                    <li style="cursor: pointer;"><a id="about-button" class="" onclick="ShowAbout()">About</a></li>
+                </ul>
+            </div>
 
+            <div id="social" style="display: none;">
+                <ul>
+
+                    <li>
+                        <a onclick="ShowContact()"><img src="img/social/twitter.png"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <center>
         <div id="page-container" page-subtype="home">
             <div class="entry">
 
                 <div class="body ">
 
-                    <div><span class="title" style="float: left">New Game</span><span class="title" style="opacity: 0 !important">New Game</span><span class="date" style="float:right">10.13.2023</span></div>
+                    <div><span class="title" style="float: left">MapGuesser released!!</span><span class="title" style="opacity: 0 !important">New Game</span><span class="date" style="float:right">10.14.2023</span></div>
+                    <br>
                     <br>
                     <div align="center " style="margin-bottom: 2px; ">
-                        
-                       <span>I started working on a game called MapGuesser based on <a href="https://www.youtube.com/channel/UCPcABVoFfCK5gDfX0PY1KGg">Drew Durnil's</a> idea, the point of the game will be to guess from which century, year or event is that map. The game is work in progress but most of it is finished</span>
+
+                        <span>I just released MapGuesser, it has a small database but will add more maps soon</span>
+                        <br>
+                        <a style="width: 100%; color: black;text-decoration: none;" href="/MapGuesser">
+                            <button class="button" style="width: 98%;margin-bottom: 5px;"><span>Play Now!</span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="entry">
+
+                <div class="body ">
+
+                    <div><span class="title" style="float: left">New Game!</span><span class="title" style="opacity: 0 !important">New Game</span><span class="date" style="float:right">10.13.2023</span></div>
+                    <br>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; ">
+
+                        <span>I started working on a game called MapGuesser based on <a href="https://www.youtube.com/channel/UCPcABVoFfCK5gDfX0PY1KGg">Drew Durnil's</a> idea, the point of the game will be to guess from which century, year or event is that map. The game is work in progress but most of it is finished</span>
                     </div>
                 </div>
             </div>
@@ -59,7 +88,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
 
                             </li>
                             <li id="bork">
@@ -69,9 +98,10 @@
                                         <div id="project-more" style="display: flex;align-items: center;"><img width="450px " href="/mapguesser" src="img/map.png"></div>
                                         <div id="more-project-info">
                                             <span style="font-size: 32px;">MapGuesser</span>
-                                            <span style="width: 449px;display: grid;">This is a game where you have to guess what time is the map from</span> <a style="width: 100%" href="/MapGuesser">
-        <button style="width: 90%;margin-bottom: 5px">Play</button>
-    </a>
+                                            <span style="width: 449px;display: grid;">This is a game where you have to guess what time is the map from</span>
+                                            <a style="width: 100%; color: black;text-decoration: none;" href="/MapGuesser">
+                                                <button class="button" style="width: 98%;margin-bottom: 5px"><span>Play</span></button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
