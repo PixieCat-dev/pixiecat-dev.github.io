@@ -1,0 +1,66 @@
+<style>
+    body {
+        background-color: #000000;
+        overflow: hidden;
+        transition: background-color 0.5s ease;
+        /* Add a transition effect to the background color */
+    }
+    
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Replace with the URL of your image */
+        background-size: 60% auto;
+        /* Set the width to 60% of the viewport, maintain aspect ratio for height */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .fixed-element {
+        position: absolute;
+        /* Adjust the distance from the right as needed */
+        /* Additional styling for your fixed element */
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+</style>
+<script>
+    function hideYtdPagesExcept(id) {
+        // Get all elements with the tag "ytd-page"
+        var ytdPages = document.querySelectorAll('ytd-page');
+
+        // Loop through each ytd-page element
+        ytdPages.forEach(function(element) {
+            // Get the value of the "page-subtype" attribute
+            var pageSubtype = element.getAttribute('page-subtype');
+
+            // Check if the page-subtype matches the specified id
+            if (pageSubtype === id) {
+                // If it matches, show the element
+                element.style.display = 'block'; // Or set any other display value you want
+            } else {
+                // If it doesn't match, hide the element
+                element.style.display = 'none';
+            }
+        });
+    }
+
+    // Example usage: Hide all ytd-page elements except those with page-subtype "example_subtype"
+</script>
+
+<body>
+    <ytd-page page-subtype="good">
+        <div class="background-image" style="background-image: url(arg/no3.png);"></div>
+        <a style="display: none;" href="javascript:void(0)" onclick="hideYtdPagesExcept('good-describe');" class="fixed-element">
+            <!-- Your fixed element content goes here -->
+        </a>
+    </ytd-page>
+    <ytd-page page-subtype="good-describe" style="display: none;">
+        <div class="background-image" style="background-image: url(arg/no2.png);"></div>
+    </ytd-page>
+</body>
