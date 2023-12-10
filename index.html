@@ -1,97 +1,155 @@
-<style>
-    body {
-        background-color: #000000;
-        overflow: hidden;
-        transition: background-color 0.5s ease;
-        /* Add a transition effect to the background color */
-    }
-    
-    .background-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        /* Replace with the URL of your image */
-        background-size: 60% auto;
-        /* Set the width to 60% of the viewport, maintain aspect ratio for height */
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    .fixed-element {
-        position: absolute;
-        /* Adjust the distance from the right as needed */
-        /* Additional styling for your fixed element */
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    #hiddenText {
-        color: white;
-        font-size: 48px;
-        position: fixed;
-        /* Use 'fixed' to make it relative to the viewport */
-        bottom: 0;
-        left: 50%;
-        /* Use 'left' instead of 'right' to center it */
-        transform: translateX(-50%);
-        /* Use transform to horizontally center it */
-    }
-    
-    .hidden-text {
-        display: none;
-        /* Initially hide the text */
-    }
-</style>
-<script>
-    function hideYtdPagesExcept(id) {
-        // Get all elements with the tag "ytd-page"
-        var ytdPages = document.querySelectorAll('ytd-page');
-
-        // Loop through each ytd-page element
-        ytdPages.forEach(function(element) {
-            // Get the value of the "page-subtype" attribute
-            var pageSubtype = element.getAttribute('page-subtype');
-
-            // Check if the page-subtype matches the specified id
-            if (pageSubtype === id) {
-                // If it matches, show the element
-                element.style.display = 'block'; // Or set any other display value you want
-            } else {
-                // If it doesn't match, hide the element
-                element.style.display = 'none';
-            }
-        });
-    }
-
-    // Example usage: Hide all ytd-page elements except those with page-subtype "example_subtype"
-</script>
-<script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        // Set a timeout for 1 minute (60,000 milliseconds)
-        setTimeout(function() {
-            // Select the element by its ID and remove the 'hidden-text' class
-            document.getElementById('hiddenText').classList.remove('hidden-text');
-        }, 60000); // 60,000 milliseconds = 1 minute
-    });
-</script>
+<head>
+    <link rel="icon" type="image/png" href="img/miya.png">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script type="text/javascript" src="js/pageselector.js"></script>
+    <title>Pixiecat</title>
+</head>
 
 <body>
-    <ytd-page page-subtype="good">
-        <div class="background-image" style="background-image: url(arg/no3.png);"></div>
-        <a href="help.html" id="hiddenText" class="hidden-text">
-            <!-- The text you want to appear after 1 minute -->
-            You waited...
-        </a>
-        <a style="display: none;" href="javascript:void(0)" onclick="hideYtdPagesExcept('good-describe');" class="fixed-element">
-            <!-- Your fixed element content goes here -->
-        </a>
-    </ytd-page>
-    <ytd-page page-subtype="good-describe" style="display: none;">
-        <div class="background-image" style="background-image: url(arg/no2.png);"></div>
-    </ytd-page>
+    <a href="/old-site" id="oldlayout" style="position: fixed;bottom: 15;right: 15;"><img height="88px" src="img/revert.png"></a>
+    <div id="header-container">
+        <div id="header">
+            <div id="logo">
+                <img src="img/miya.png"><span style="font-size: 28px;color:white">Pixiecat</span>
+            </div>
+            <div id="nav">
+                <ul style="cursor:default   ;">
+                    <li style="cursor: pointer;"><a id="home-button" class="active" onclick="ShowHome()">Home</a></li>
+                    <li style="cursor: pointer;"><a id="projects-button" class="" onclick="ShowProjects()">Projects</a></li>
+                    <li style="cursor: pointer;"><a id="contact-button" class="" onclick="ShowContact()">Contact</a></li>
+                    <li style="cursor: pointer;"><a id="about-button" class="" onclick="ShowAbout()">About</a></li>
+                </ul>
+            </div>
+
+            <div id="social" style="display: none;">
+                <ul>
+
+                    <li>
+                        <a onclick="ShowContact()"><img src="img/social/twitter.png"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <center>
+        <div id="page-container" page-subtype="home">
+            <div class="entry">
+
+                <div class="body ">
+
+                    <div><span class="title" style="float: left">MapGuesser released!!</span><span class="title" style="opacity: 0 !important">New Game</span><span class="date" style="float:right">10.14.2023</span></div>
+                    <br>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; ">
+
+                        <span>I just released MapGuesser, it has a small database but will add more maps soon</span>
+                        <br>
+                        <a style="width: 100%; color: black;text-decoration: none;" href="/MapGuesser">
+                            <button class="button" style="width: 98%;margin-bottom: 5px;"><span>Play Now!</span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="entry">
+
+                <div class="body ">
+
+                    <div><span class="title" style="float: left">New Game!</span><span class="title" style="opacity: 0 !important">New Game</span><span class="date" style="float:right">10.13.2023</span></div>
+                    <br>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; ">
+
+                        <span>I started working on a game called MapGuesser based on <a href="https://www.youtube.com/channel/UCPcABVoFfCK5gDfX0PY1KGg">Drew Durnil's</a> idea, the point of the game will be to guess from which century, year or event is that map. The game is work in progress but most of it is finished</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-container" style="display: none" page-subtype="projects">
+            <div class="entry">
+
+                <div class="body ">
+
+                    <div><span class="title">Projects</span></div>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; ">
+                        <ul style="font-size: 20px;list-style: none;margin-right: 40px;">
+                            <li>
+
+                                <div id="project-more-container-free-wspace" style="height: 230px;">
+                                    <div id="project-more-container" style="margin-left: 250px;    position: absolute;height: fit-content;width: fit-content;background:#eeeeee;border-radius: 3px;border: 1px solid #949494;">
+                                        <div id="project-more" style="display: flex;align-items: center;"><img width="450px " src="img/website.png   "></div>
+                                        <div id="more-project-info">
+                                            <span style="font-size: 32px;">Website</span>
+                                            <span style="display: grid;">My website</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </li>
+                            <li id="bork">
+
+                                <div id="project-more-container-free-wspace" style="height: 490px;">
+                                    <div id="project-more-container" style="margin-left: 250px;    position: absolute;height: fit-content;width: fit-content;background:#eeeeee;border-radius: 3px;border: 1px solid #949494;">
+                                        <div id="project-more" style="display: flex;align-items: center;"><img width="450px " href="/mapguesser" src="img/map.png"></div>
+                                        <div id="more-project-info">
+                                            <span style="font-size: 32px;">MapGuesser</span>
+                                            <span style="width: 449px;display: grid;">This is a game where you have to guess what time is the map from</span>
+                                            <a style="width: 100%; color: black;text-decoration: none;" href="/MapGuesser">
+                                                <button class="button" style="width: 98%;margin-bottom: 5px"><span>Play</span></button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>• I need more ideas for projects</li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="page-container" style="display: none" page-subtype="contact">
+            <div class="entry ">
+
+                <div class="body ">
+
+                    <div><span class="title ">Contact</span></div>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; ">
+                        <ul style="font-size: 20px;list-style: none;margin-right: 40px; ">
+                            <li>• Discord (soon)</li>
+                            <li>• Twitter (soon)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-container" style="display: none" page-subtype="about">
+            <div class="entry">
+
+                <div class="body ">
+
+                    <div><span class="title">About Me</span></div>
+                    <br>
+                    <div align="center " style="margin-bottom: 2px; "><span class="title" style="font-size: 28px;">Hi, I'm PixieCat and i like programming, cooking, gaming</span>
+
+                        <ul style="list-style-type: none;">
+                            <li><span style="font-size: 12px">Character on avatar: Miya Chinen</span></li>
+                            <li><span style="font-size: 12px;display:grid;">All trademarks are the property of their respective owners</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </center>
 </body>
